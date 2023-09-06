@@ -1,0 +1,17 @@
+<%-include("header.ejs")%>
+<h1><%= view %></h1>
+
+<div class="items">
+    
+    <form action='/today'method="post">
+    <input type="text" name="newItemTO">
+    <input type="submit" name="button" value="Add New Task">
+    </form>
+    </div>
+    <div class="mytasks">
+    <% if (todaysTask) {%>
+    <div><%- todaysTask %></div>
+       <% } else { %>
+        <h2>No Task Available</h2>
+       <%}%>
+    </div>
